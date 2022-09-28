@@ -1,19 +1,19 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
-import image1 from './images/content/homeV2SliderImg2.jpg';
-import i1 from './images/content/instagramWidgetItem.jpg';
-import i2 from './images/content/instagramWidgetItem2.jpg';
-import i3 from './images/content/instagramWidgetItem3.jpg';
+
+import i1 from './images/content/inst.jpg';
+import i2 from './images/content/inst2.jpg';
+import i3 from './images/content/inst3.jpg';
 import i4 from './images/ourlogo.png';
-import i5 from './images/content/instagramWidgetItem5.jpg';
-import i6 from './images/content/instagramWidgetItem6.jpg';
+import i5 from './images/content/inst4.jpg';
+import i6 from './images/content/inst5.jpg';
 import i7 from './images/content/instagramWidgetItem7.jpg';
 import i8 from './images/content/instagramWidgetItem8.jpg';
 import i9 from './images/content/instagramWidgetItem9.jpg';
 
 
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 
@@ -35,6 +35,8 @@ function SinglePost() {
         }
         getData();
     }, [])
+
+
 
     // let GetId = data.map((ele) => {
     //     return ele.id;
