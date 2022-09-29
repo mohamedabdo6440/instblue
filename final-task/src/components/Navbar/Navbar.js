@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom"
-export function Navbar() {
+export function Navbar({ categores }) {
 
     return (
         <header id="header">
@@ -13,11 +13,18 @@ export function Navbar() {
                             <Link to="/">home</Link>
                         </li>
                         <li>
-                            <Link to="/">Category</Link>
+                            <Link>Category</Link>
                             <ul>
-                                <li><Link to="category.html">Category one</Link></li>
-                                <li><Link to="category.html">Category two</Link></li>
-                                <li><Link to="category.html">Category three</Link></li>
+
+                                {
+                                    categores.map((cate) => {
+                                        return (
+
+                                            <li><Link to={`${cate}/`}>{cate}</Link></li>
+                                        )
+                                    })
+                                }
+
                             </ul>
                         </li>
 
