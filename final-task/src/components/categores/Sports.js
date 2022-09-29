@@ -9,10 +9,10 @@ import i7 from './images/content/instagramWidgetItem7.jpg';
 import i8 from './images/content/instagramWidgetItem8.jpg';
 import i9 from './images/content/instagramWidgetItem9.jpg';
 
-const Categores = ({ categores }) => {
+const Sports = () => {
 
     const [data, setData] = useState();
-    const [path, setPath] = useState();
+
 
     useEffect(() => {
         const getData = async () => {
@@ -20,16 +20,14 @@ const Categores = ({ categores }) => {
             const response = await fetch(`https://webeetec.com/itsharks24/blog/api/getcategory.php`);
             let actualData = await response.json();
             const fil = actualData.filter((post) => {
-                return post.name === path;
+                return post.name === "Sports";
             })
-            setData(fil);
+            console.log(fil);
 
 
-            const pName = window.location.pathname;
-            const usingSplit = pName.split('').filter((el) => {
-                return el.charAt(0) !== "/";
-            }).join("");
-            setPath(usingSplit);
+
+
+
 
         }
 
@@ -56,7 +54,10 @@ const Categores = ({ categores }) => {
                             </div>
 
 
-                            {
+                            <h1>Category is Sports</h1>
+
+
+                            {/* { 
                                 data.map((p) => {
                                     return (
                                         <div className="singlePostWrap" key={p.id}>
@@ -67,9 +68,9 @@ const Categores = ({ categores }) => {
                                             <h1>{`Date : ${p.date}`}</h1>
                                         </div>
                                     )
-                                })
+                                }) 
 
-                            }
+                            } */}
 
 
 
@@ -339,4 +340,4 @@ const Categores = ({ categores }) => {
     )
 }
 
-export default Categores;
+export default Sports;

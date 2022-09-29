@@ -1,6 +1,8 @@
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
-import Categores from "./components/categores/Categores";
+import Poltics from "./components/categores/Poltics";
+import Courses from "./components/categores/Courses";
+import Sports from "./components/categores/Sports";
 import Body from "./components/Body";
 import SinglePost from "./components/Singlepost";
 import './components/Allstyle.css';
@@ -14,13 +16,13 @@ import {
 
 function App() {
 
-  const categores = ["Poltics", "Accidents", "Sports", "Alerts", "Health", "Reports", "Courses"];
+  const categores = ["Poltics", "Sports", "Courses"];
 
   const path = categores.map((p) => {
     return p;
   })
 
-  console.log(window.location);
+
 
 
   return (
@@ -32,11 +34,10 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path="/single/:id" element={<SinglePost />} />
 
-          {
-            categores.map((p) => {
-              return <Route path={`${p}/`} element={<Categores categores={categores} path={path} />} />
-            })
-          }
+          <Route path="Poltics" element={<Poltics />} />
+
+          <Route path="Sports" element={<Sports />} />
+          <Route path="Courses" element={<Courses />} />
         </Routes>
         <Footer />
 

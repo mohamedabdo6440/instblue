@@ -20,7 +20,7 @@ export function Navbar({ categores }) {
                                     categores.map((cate) => {
                                         return (
 
-                                            <li><Link to={`${cate}/`}>{cate}</Link></li>
+                                            <li><Link to={`${cate}`}>{cate}</Link></li>
                                         )
                                     })
                                 }
