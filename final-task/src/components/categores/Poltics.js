@@ -54,7 +54,7 @@ const Poltics = () => {
                             </div>
 
 
-                            <h1>Category is Poltics</h1>
+                            <h1 style={{ color: 'white', backgroundColor: 'yellowgreen', textAlign: 'center' }}>Category is Poltics</h1>
 
 
                             {/* { 

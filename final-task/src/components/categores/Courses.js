@@ -54,9 +54,9 @@ const Courses = () => {
                             </div>
 
 
-                            <h1>Category is Courses</h1>
+                            <h1 style={{ color: 'white', backgroundColor: 'yellowgreen', textAlign: 'center' }}>Category is Courses</h1>
 
-
+                            {/*this code working but need speed save data */}
                             {/* { 
                                 data.map((p) => {
                                     return (

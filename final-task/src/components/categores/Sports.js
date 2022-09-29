@@ -54,7 +54,7 @@ const Sports = () => {
                             </div>
 
 
-                            <h1>Category is Sports</h1>
+                            <h1 style={{ color: 'white', backgroundColor: 'yellowgreen', textAlign: 'center' }}>Category is Sports</h1>
 
 
                             {/* { 
