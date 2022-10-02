@@ -6,7 +6,7 @@ import Sports from "./components/categores/Sports";
 import Body from "./components/Body";
 import SinglePost from "./components/Singlepost";
 import './components/Allstyle.css';
-
+import Error from "./components/Error404";
 import {
   BrowserRouter,
   Routes,
@@ -35,9 +35,9 @@ function App() {
           <Route path="/single/:id" element={<SinglePost />} />
 
           <Route path="Poltics" element={<Poltics />} />
-
           <Route path="Sports" element={<Sports />} />
           <Route path="Courses" element={<Courses />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
 
@@ -48,6 +48,8 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
 
